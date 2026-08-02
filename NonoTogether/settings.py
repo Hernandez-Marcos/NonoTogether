@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'accounts.apps.AccountsConfig',
+    'game.apps.GameConfig',
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'

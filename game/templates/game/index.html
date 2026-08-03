@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-nonogram-puzzle-grid></div>
+    <div data-nonogram-game-controls></div>
+
+    <script type="module">
+
+	import {Creator, Gui} from "{% static 'games/js/libs/src/index.js' %}";
+
+	const creator = new Creator();
+	const puzzle  = creator.createRandom( 10, 10 );
+	const gui = new Gui("{% static 'games/js/libs/dist/themes/default' %}");
+
+	gui.draw( puzzle );
+
+</script>
+</body>
+</html>
